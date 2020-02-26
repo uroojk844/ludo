@@ -1,0 +1,170 @@
+#ludo{
+    float: left;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+}
+.container{
+    width: 100%;
+    float: left;
+}
+
+.container div{
+    float: left;
+}
+
+#home{
+    float: left;
+    background-image: conic-gradient(from 45deg, #ffeb3b 90deg,#2196F3 90deg 180deg,#f44336 180deg 270deg,#4caf50 270deg 45deg);
+}
+
+.container table{
+    border-collapse: collapse;
+    float: left;
+}
+
+.container td{
+    border: 1px solid #888;
+}
+
+td{
+    font-size: 28px;
+    color: #888;
+    text-align: center;
+}
+
+.dice-cont{
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.user-cont{
+    position: absolute;
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+}
+
+.users div{
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+.user i{
+    font-size: 100px;
+}
+
+@media screen and (max-width:600px){
+    #ludo{
+        width: 304px;
+    }
+    .container div{
+        width: 121px;
+        height: 121px;
+    }
+    .container td{
+        width: 20px;
+        height: 20px;
+        font-size: x-small;
+    }
+    #home{
+        width: 61px;
+        height: 61px;
+    }
+    .user-cont, .dice-cont{
+        position: absolute;
+        top: 330px;
+        transform: translateY(0);
+    }
+    .dice-cont{
+        right: 20px;
+    }
+    .user-cont{
+        width: 60%;
+        left: 10px;
+    }
+    .users div{
+        width: 30%;
+        float: left;
+    }
+}
+
+@media screen and (min-width:600px){
+    #ludo{
+        width: 603px;
+    }
+    .container div{
+        width: 241px;
+        height: 241px;
+    }
+    .container td{
+        width: 40px;
+        height: 40px;
+        font-size: larger;
+    }
+    #home{
+        width: 121px;
+        height: 121px;
+    }
+    .user-cont, .dice-cont{
+        position: absolute;
+        top: 630px;
+        transform: translateY(0);
+    }
+    .user-cont{
+        left: 50px;
+        width: 60%;
+    }
+
+    .users div{
+        width: 20%;
+        float: left;
+    }
+
+    .dice-cont{
+        right: 50px;
+    }
+}
+
+@media screen and (min-width:992px){
+    #ludo{
+        width: 679px;
+    }
+    .container div{
+        width: 271px;
+        height: 271px;
+    }
+    .container td{
+        width: 45px;
+        height: 45px;
+        font-size: x-large;
+    }
+    #home{
+        width: 136px;
+        height: 136px;
+    }
+
+    .user-cont{
+        width: 150px;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .users div{
+        display: block;
+        width: 90%;
+    }
+
+    .dice-cont{
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}

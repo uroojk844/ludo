@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+
+    <div class="user-cont">
+        <div class="users">
+            <div class="w3-red" id="u1">User 1</div>
+            <div class="w3-green" id="u2">User 2</div>
+            <div class="w3-blue" id="u3">User 3</div>
+            <div class="w3-yellow" id="u4">User 4</div>
+        </div>
+        <i class="fas fa-user-alt w3-col s6 l12 w3-jumbo w3-margin-top"></i>
+        <div class="w3-margin-top w3-large w3-col s6 l12 w3-text-red">User X Chance</div>
+    </div>
+
+    <div id="ludo" class="w3-card-4">
+        <div class="container">
+            <div id="red" class="w3-red"></div>
+            <table id="t1">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div id="green" class="w3-green"></div>
+        </div>
+        <div class="container">
+            <table id="t2">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div id="home"></div>
+            <table id="t3">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <div id="blue" class="w3-blue"></div>
+            <table id="t4">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div id="yellow" class="w3-yellow"></div>
+        </div>
+    </div>
+
+    <div class="dice-cont w3-card-4 w3-round">
+        <div class="disp w3-padding w3-jumbo">0</div>
+        <div class="w3-button w3-black w3-block"><b>Roll</b></div>
+    </div>
+
+    <script>
+        var tab = document.querySelectorAll('table');
+        var i,j;
+        for(i=1;i<=tab.length;i++){
+            var td = document.querySelectorAll('#t'+i+' td');
+            if(i==1){
+                for(j=4;j<td.length;j=j+3){
+                    td[j].classList.add('w3-green');
+                }
+                td[5].classList.add('w3-green');
+                td[6].innerHTML="<i class='fas fa-sun'></i>";
+            }
+            else if(i==2){
+                for(j=7;j<12;j++){
+                    td[j].classList.add('w3-red');
+                }
+                td[1].classList.add('w3-red');
+                td[14].innerHTML="<i class='fas fa-sun'></i>";
+            }
+            else if(i==3){
+                for(j=6;j<11;j++){
+                    td[j].classList.add('w3-yellow');
+                }
+                td[3].innerHTML="<i class='fas fa-sun'></i>";
+                td[16].classList.add('w3-yellow');
+            }
+            else{
+                for(j=1;j<td.length-3;j=j+3){
+                    td[j].classList.add('w3-blue');
+                }
+                td[11].innerHTML="<i class='fas fa-sun'></i>"
+                td[12].classList.add('w3-blue');
+            }
+        }
+    </script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</body>
+
+</html>
